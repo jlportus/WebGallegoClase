@@ -4,6 +4,7 @@ import { ShellComponent } from "./shell/shell.component";
 import { HeaderComponent } from "./shell/header/header.component";
 import { MainComponent } from "./shell/main/main.component";
 import { FooterComponent } from "./shell/footer/footer.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { FooterComponent } from "./shell/footer/footer.component";
     MainComponent,
     FooterComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [ShellComponent],
 })
 export class CoreModule {}
