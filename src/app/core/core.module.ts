@@ -5,6 +5,7 @@ import { HeaderComponent } from "./shell/header/header.component";
 import { MainComponent } from "./shell/main/main.component";
 import { FooterComponent } from "./shell/footer/footer.component";
 import { RouterModule } from "@angular/router";
+import { NotFoundComponent } from "./not-found/not-found.component";
 
 @NgModule({
   declarations: [
@@ -12,8 +13,9 @@ import { RouterModule } from "@angular/router";
     HeaderComponent,
     MainComponent,
     FooterComponent,
+    NotFoundComponent,
   ],
   imports: [CommonModule, RouterModule],
-  exports: [ShellComponent],
+  exports: [ShellComponent, MainComponent],
 })
 export class CoreModule {}

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ShellComponent } from './core/shell/shell.component';
 import { CoreModule } from './core/core.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
