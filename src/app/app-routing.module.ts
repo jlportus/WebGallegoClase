@@ -4,10 +4,10 @@ import { ShellComponent } from './core/shell/shell.component';
 
 
 const routes: Routes = [
-  {
-    path: ``,
-    component: ShellComponent
-  }
+  // {
+  //   path: ``,
+  //   component: ShellComponent
+  // }
 ];
 
 @NgModule({
