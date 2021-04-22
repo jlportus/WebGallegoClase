@@ -11,6 +11,11 @@ const routes: Routes = [
       import("src/app/home/home.module").then((m) => m.HomeModule),
   },
   {
+    path: `about`,
+    loadChildren: () =>
+      import("src/app/about/about.module").then((m) => m.AboutModule),
+  },
+  {
     path: `not-found`,
     component: NotFoundComponent,
   },
