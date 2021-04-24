@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { NotFoundComponent } from "./core/not-found/not-found.component";
-import { HomeComponent } from "./home/home/home.component";
+
 
 const routes: Routes = [
   {
@@ -14,6 +14,11 @@ const routes: Routes = [
     path: `about`,
     loadChildren: () =>
       import("src/app/about/about.module").then((m) => m.AboutModule),
+  },
+  {
+    path: `contacts`,
+    loadChildren: () =>
+      import("src/app/contacts/contacts.module").then((m) => m.ContactsModule),
   },
   {
     path: `not-found`,
