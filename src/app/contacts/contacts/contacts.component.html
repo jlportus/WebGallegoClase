@@ -36,6 +36,29 @@
     <input name="gender" value="n" type="radio" [(ngModel)]="contact.gender" />
     <i>neutro</i>
   </section>
+  <!-- desplegable -->
+  <section>
+    <label for="workStatus">Work Status</label>
+    <select name="workStatus" [(ngModel)]="contact.workStatus">
+      <!-- Estructura *ngFor -->
+      <option *ngFor="let wkSt of workStatuses" [value]="wkSt.id">
+        <!-- va al array de workstatuses y lo recorre uno a uno añadiendolos a las opciones.
+        Le paso como parametro del array el ID para que sea lo que almacene en el objeto -->
+        <span>{{ wkSt.description }}</span>
+      </option>
+    </select>
+  </section>
+<!-- un IF -->
+  <section *ngIf="contact.workStatus == '3'; else education">
+<!-- bloque del true -->
+    <label for="company">Company Name</label>
+    <input name="company" type="text" [(ngModel)]="contact.company" />
+  </section>
+<!-- bloque del else -->
+  <ng-template #education>
+    <label for="education">Education</label>
+    <input name="education" type="text" [(ngModel)]="contact.education" />
+  </ng-template>
 </form>
 
 <pre>{{ contact | json }}</pre>
