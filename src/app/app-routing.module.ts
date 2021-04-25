@@ -3,7 +3,6 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { NotFoundComponent } from "./core/not-found/not-found.component";
 
-
 const routes: Routes = [
   {
     path: ``,
@@ -19,6 +18,11 @@ const routes: Routes = [
     path: `contacts`,
     loadChildren: () =>
       import("src/app/contacts/contacts.module").then((m) => m.ContactsModule),
+  },
+  {
+    path: `car`,
+    loadChildren: () =>
+      import("src/app/car/car.module").then((m) => m.CarModule),
   },
   {
     path: `not-found`,
