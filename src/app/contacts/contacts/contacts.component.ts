@@ -12,6 +12,12 @@ export class ContactsComponent implements OnInit {
   public counterClass = "tag secondary";
   public formHidden = true;
 
+  public contact = {
+    name: "",
+    isVIP: false,
+    gender: "",
+  };
+
   constructor() {}
 
   ngOnInit() {}

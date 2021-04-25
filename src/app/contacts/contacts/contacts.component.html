@@ -9,6 +9,33 @@
 </p>
 <input value="Show Form" type="button" (click)="formHidden = false" />
 <input value="Hide Form" type="button" (click)="formHidden = true" />
-<form [ngClass]="{ 'hidden': formHidden }">
+<form [ngClass]="{ hidden: formHidden }">
   <fieldset><legend>Contact Form</legend></fieldset>
+  <!-- campo texto -->
+  <section>
+    <label for="name">Name</label>
+    <input
+      name="name"
+      type="text"
+      [(ngModel)]="contact.name"
+      placeholder="Contact name"
+    />
+  </section>
+  <!-- checkbutton -->
+  <section>
+    <label for="isVIP">Is V.I.P.</label>
+    <input name="isVIP" type="checkbox" [(ngModel)]="contact.isVIP" />
+  </section>
+  <!-- radio button -->
+  <section>
+    <label for="gender">Gender</label>
+    <input name="gender" value="m" type="radio" [(ngModel)]="contact.gender" />
+    <i>Male</i>
+    <input name="gender" value="f" type="radio" [(ngModel)]="contact.gender" />
+    <i>Female</i>
+    <input name="gender" value="n" type="radio" [(ngModel)]="contact.gender" />
+    <i>neutro</i>
+  </section>
 </form>
+
+<pre>{{ contact | json }}</pre>
