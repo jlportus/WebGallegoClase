@@ -6,9 +6,10 @@ import { AbstractCultureConverterService } from "../service/abstract-culture-con
   templateUrl: "./culture-converter.component.html",
   styles: [],
 })
+  
 export class CultureConverterComponent implements OnInit {
-  public source: string;
-  public target: string;
+  public sourceCulture: string;
+  public targetCulture: string;
   public sourceUnits = 0;
   public targetUnits: number;
 
@@ -17,8 +18,8 @@ export class CultureConverterComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.source = this.cultureConverterService.sourceCulture;
-    this.target = this.cultureConverterService.targetCulture;
+    this.sourceCulture = this.cultureConverterService.sourceCulture;
+    this.targetCulture = this.cultureConverterService.targetCulture;
     this.convert();
   }
 

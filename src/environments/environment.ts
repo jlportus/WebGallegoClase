@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  title: `ẀebPortus`
+  title: `ẀebPortus`,
+  unitsCulture: 'imperial'
 };
 
 /*
