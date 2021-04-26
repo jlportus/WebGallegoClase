@@ -27,7 +27,16 @@ const routes: Routes = [
   {
     path: `converter`,
     loadChildren: () =>
-      import("src/app/converter/converter.module").then((m) => m.ConverterModule),
+      import("src/app/converter/converter.module").then(
+        (m) => m.ConverterModule
+      ),
+  },
+  {
+    path: "propietarios",
+    loadChildren: () =>
+      import("./propietarios/propietarios.module").then(
+        (m) => m.PropietariosModule
+      ),
   },
   {
     path: `not-found`,
