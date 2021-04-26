@@ -25,6 +25,11 @@ const routes: Routes = [
       import("src/app/car/car.module").then((m) => m.CarModule),
   },
   {
+    path: `converter`,
+    loadChildren: () =>
+      import("src/app/converter/converter.module").then((m) => m.ConverterModule),
+  },
+  {
     path: `not-found`,
     component: NotFoundComponent,
   },
