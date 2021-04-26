@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { ConverterService } from "../serevice/converter.service";
+import { ConverterService } from "../service/converter.service";
+
 
 @Component({
   selector: "app-converter",
