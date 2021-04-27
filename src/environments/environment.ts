@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  title: `ẀebPortus`
+  title: `WebPortus`,
+  host: `http://localhost:8099/`,
+  hostControladores: `http://localhost:8099/api/`,
 };
 
 /*
